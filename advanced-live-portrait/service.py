@@ -36,7 +36,7 @@ class ExpressionEditorParams(BaseModel):
     smile: float = Field(0, ge=-0.3, le=1.3, description="Smile intensity")
     src_ratio: float = Field(1, ge=0, le=1, description="Source ratio adjustment")
     sample_ratio: float = Field(1, ge=-0.2, le=1.2, description="Sample ratio adjustment")
-    sample_parts: Literal["OnlyExpression", "OnlyRotation", "OnlyMouth", "OnlyEyes", "All"]
+    sample_parts: Literal["OnlyExpression", "OnlyRotation", "OnlyMouth", "OnlyEyes", "All"] = "OnlyExpression"
     crop_factor: float = Field(1.7, ge=1.5, le=2.5, description="Crop factor adjustment")
 
 
