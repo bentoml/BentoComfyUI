@@ -1,0 +1,100 @@
+{
+    "26": {
+      "inputs": {
+        "image": "IMG_4751.JPG",
+        "upload": "image"
+      },
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "Load Image"
+      }
+    },
+    "27": {
+      "inputs": {
+        "video": "driving_video.mp4",
+        "force_rate": 0,
+        "force_size": "Disabled",
+        "custom_width": 512,
+        "custom_height": 512,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 2
+      },
+      "class_type": "VHS_LoadVideo",
+      "_meta": {
+        "title": "Load Video (Upload) 🎥🅥🅗🅢"
+      }
+    },
+    "28": {
+      "inputs": {
+        "retargeting_eyes": 0,
+        "retargeting_mouth": 0,
+        "crop_factor": 1.5,
+        "turn_on": true,
+        "tracking_src_vid": "",
+        "animate_without_vid": false,
+        "command": "",
+        "src_images": [
+          "30",
+          0
+        ],
+        "driving_images": [
+          "27",
+          0
+        ]
+      },
+      "class_type": "AdvancedLivePortrait",
+      "_meta": {
+        "title": "Advanced Live Portrait (PHM)"
+      }
+    },
+    "29": {
+      "inputs": {
+        "frame_rate": 15,
+        "loop_count": 0,
+        "filename_prefix": "AdvancedLivePortrait",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "pingpong": false,
+        "save_output": true,
+        "images": [
+          "28",
+          0
+        ]
+      },
+      "class_type": "VHS_VideoCombine",
+      "_meta": {
+        "title": "Video Combine 🎥🅥🅗🅢"
+      }
+    },
+    "30": {
+      "inputs": {
+        "rotate_pitch": 0,
+        "rotate_yaw": 0,
+        "rotate_roll": 0,
+        "blink": 0,
+        "eyebrow": 0,
+        "wink": 0,
+        "pupil_x": 0,
+        "pupil_y": 0,
+        "aaa": 0,
+        "eee": 0,
+        "woo": 0,
+        "smile": 0.25,
+        "src_ratio": 1,
+        "sample_ratio": 1,
+        "sample_parts": "OnlyExpression",
+        "crop_factor": 1.7000000000000002,
+        "src_image": [
+          "26",
+          0
+        ]
+      },
+      "class_type": "ExpressionEditor",
+      "_meta": {
+        "title": "Expression Editor (PHM)"
+      }
+    }
+  }
