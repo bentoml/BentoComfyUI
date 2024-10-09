@@ -127,7 +127,7 @@ class AdvancedLivePortrait:
         
         # Return the one with the expected extension
         for filename in os.listdir(ctx.temp_dir):
-            if filename.endswith(self.extension):
+            if filename.startswith(filename_prefix) and filename.endswith(self.extension):
                 return Path(ctx.temp_dir) / Path(filename)
         
         raise ValueError("Cannot find output file in the output directory")
