@@ -30,4 +30,6 @@ ultralytics
 tyro==0.8.5
 dill
 
+# Utilizing a specific git hash of the comfy-cli repository instead of the released Python package
+# due to the pending pull request (https://github.com/Comfy-Org/comfy-cli/pull/194) currently under review.
 git+https://github.com/ssheng/comfy-cli.git@0bbd61e1b9d91b863c4f5ff636341bbde0e8a512
